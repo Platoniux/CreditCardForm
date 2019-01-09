@@ -1,0 +1,214 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  background-color: #9bffe2;
+  font-family: Raleway, Arial, sans-serif;
+}
+
+button,
+input {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button {
+  text-transform: none;
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.container {
+  margin: auto 20px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #15324f;
+}
+
+@media (min-width: 475px) {
+  .container {
+    margin: auto;
+  }
+}
+
+.container__headline {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+}
+
+.container__headline--normal-weight {
+  font-weight: normal;
+}
+
+.container__success-msg {
+  text-align: center;
+  color: white;
+}
+
+.card-form__wrapper {
+  margin-bottom: 5px;
+}
+
+.card-form__wrapper--sm {
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 49%;
+}
+
+.card-form__error-msg {
+  display: block;
+  height: 10px;
+  width: 100%;
+  padding-bottom: 20px;
+  color: red;
+}
+
+.card-form__card-number {
+  padding-left: 60px;
+  background: url(../img/credit-card.svg) 3% center/40px no-repeat;
+  background-color: white;
+  border-width: 0;
+  border-radius: 7px;
+  width: 100%;
+  height: 40px;
+}
+
+.card-form__name {
+  padding-left: 60px;
+  background: url(../img/man-user.svg) 3% center/30px no-repeat;
+  background-color: white;
+  border-width: 0;
+  border-radius: 7px;
+  width: 100%;
+  height: 40px;
+}
+
+.card-form__date {
+  padding-left: 50px;
+  background: url(../img/calendar-with-a-clock-time-tools.svg) 5% center/35px no-repeat;
+  background-color: white;
+  border-width: 0;
+  border-radius: 7px;
+  width: 100%;
+  height: 40px;
+}
+
+.card-form__cvv {
+  padding-left: 50px;
+  background: url(../img/cvv.svg) 5% center/35px no-repeat;
+  background-color: white;
+  border-width: 0;
+  border-radius: 7px;
+  width: 100%;
+  height: 40px;
+}
+
+.card-form__store-card {
+  display: block;
+  position: relative;
+  padding-left: 15px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: bold;
+  color: white;
+}
+
+.card-form__store-card:hover .card-form__agree-store-card + .card-form__agree-store-card-checkbox {
+  background-color: #c3cee2;
+}
+
+.card-form__store-card .card-form__agree-store-card:checked + .card-form__agree-store-card-checkbox {
+  background: url(../img/correct-symbol.svg) center center/12px no-repeat;
+  background-color: white;
+}
+
+.card-form__agree-store-card {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+}
+
+.card-form__agree-store-card-checkbox {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 13px;
+  width: 11px;
+  border-radius: 2px;
+  background-color: white;
+}
+
+.card-form__email-of-customer {
+  display: block;
+  padding-left: 60px;
+  background: url(../img/envelope.svg) 3% center/30px no-repeat;
+  background-color: white;
+  border-width: 0;
+  border-radius: 7px;
+  width: 100%;
+  height: 40px;
+}
+
+.card-form__submit-btn {
+  width: 100%;
+  height: 60px;
+  margin-top: 20px;
+  border-width: 0;
+  border-radius: 7px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #42f477;
+}
+
+.card-form__submit-btn:hover {
+  background-color: #04ce41;
+}
+
+.loader {
+  margin: auto;
+}
+
+.loader__circle {
+  animation: load 0.7s linear reverse infinite;
+}
+
+@keyframes load {
+  from {
+    stroke-dashoffset: 76;
+  }
+  50% {
+    stroke-dashoffset: 152;
+  }
+  to {
+    stroke-dashoffset: 228;
+  }
+}
+
+.js-display-none {
+  display: none;
+}

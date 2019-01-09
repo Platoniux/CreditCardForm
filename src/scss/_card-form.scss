@@ -1,0 +1,109 @@
+.card-form {
+
+  &__wrapper {
+    margin-bottom: 5px;
+
+    &--sm {
+      display: inline-block;
+      margin-bottom: 10px;
+      width: 49%;
+    }
+  }
+
+  &__error-msg {
+    display: block;
+    height: 10px;
+    width: 100%;
+    padding-bottom: 20px;
+    color: $error-color;
+  }
+
+  &__card-number {
+    padding-left: 60px;
+    background: url(../img/credit-card.svg) 3% center / 40px no-repeat;
+    background-color: $main-font-color;
+    @include input-style;
+  }
+
+  &__name {
+    padding-left: 60px;
+    background: url(../img/man-user.svg) 3% center / 30px no-repeat;
+    background-color: $main-font-color;
+    @include input-style;
+  }
+
+  &__date {
+    padding-left: 50px;
+    background: url(../img/calendar-with-a-clock-time-tools.svg) 5% center / 35px no-repeat;
+    background-color: $main-font-color;
+    @include input-style;
+  }
+
+  &__cvv {
+    padding-left: 50px;
+    background: url(../img/cvv.svg) 5% center / 35px no-repeat;
+    background-color: $main-font-color;
+    @include input-style;
+  }
+
+  &__store-card {
+    display: block;
+    position: relative;
+    padding-left: 15px;
+    cursor: pointer;
+    user-select: none;
+    font-weight: bold;
+    color: $main-font-color;
+
+    &:hover .card-form__agree-store-card + .card-form__agree-store-card-checkbox {
+      background-color: $hover-color;
+    }
+
+    & .card-form__agree-store-card:checked + .card-form__agree-store-card-checkbox {
+      background: url(../img/correct-symbol.svg) center center / 12px no-repeat;
+      background-color: $main-font-color;
+    }
+  }
+
+  &__agree-store-card {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+  }
+
+  &__agree-store-card-checkbox {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 13px;
+    width: 11px;
+    border-radius: 2px;
+    background-color: $main-font-color;
+  }
+
+  &__email-of-customer {
+    display: block;
+    padding-left: 60px;
+    background: url(../img/envelope.svg) 3% center / 30px no-repeat;
+    background-color: $main-font-color;
+    @include input-style;
+  }
+
+  &__submit-btn {
+    width: 100%;
+    height: 60px;
+    margin-top: 20px;
+    border-width: 0;
+    border-radius: 7px;
+    color: $main-font-color;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: $button-color;
+
+    &:hover {
+      background-color: $button-color-hover;
+    }
+  }
+}

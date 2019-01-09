@@ -1,0 +1,26 @@
+.container {
+  margin: auto 20px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: $main-container-color;
+
+  @include sm {
+    margin: auto;
+  }
+
+  &__headline {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: $big-font;
+    color: $main-font-color;
+
+    &--normal-weight {
+      font-weight: normal;
+    }
+  }
+
+  &__success-msg {
+    text-align: center;
+    color: $main-font-color;
+  }
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Credit Card Form</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="container__headline">
+        CreditCard
+      <span class="container__headline container__headline--normal-weight">
+        Form
+      </span>
+    </h1>
+    <form id="credit-card-form" 
+          class="card-form js-form"
+          name="credit-card-form" 
+          action="#" 
+          method="post" 
+          >
+      <div class="card-form__wrapper">
+        <span class="card-form__error-msg js-error-msg-card-number"></span>
+        <input class="card-form__card-number js-card-number" 
+               type="text"
+               name="card-number"
+               form="credit-card-form" 
+               autofocus 
+               maxlength="16" 
+               pattern="[0-9]*"
+               autocorrect="off" 
+               placeholder="Card number"
+               autocapitalize="off"
+               autocomplete="off" 
+               required 
+               inputmode="numeric">
+        <div class="card-form__card-type"></div>
+      </div>
+      <div class="card-form__wrapper">
+        <span class="card-form__error-msg js-error-msg-customer-name"></span>
+        <input class="card-form__name js-cust-name" 
+               type="text"
+               name="name-of-customer"
+               form="credit-card-form" 
+               placeholder="Name"
+               autocorrect="off"
+               autocapitalize="off"
+               autocomplete="off"
+               required>
+      </div>
+      <div class="card-form__wrapper card-form__wrapper--sm">
+        <span class="card-form__error-msg js-error-msg-date"></span>
+        <input class="card-form__date js-card-date" 
+               type="text"
+               name="expiration-date"
+               form="credit-card-form" 
+               placeholder="MM/YY"
+               maxlength="5" 
+               inputmode="numeric"
+               pattern="/\d*([\/]?\d+)/"
+               autocorrect="off"
+               autocomplete="off"
+               autocapitalize="off"
+               required>
+      </div>
+      <div class="card-form__wrapper card-form__wrapper--sm">
+        <span class="card-form__error-msg js-error-msg-cvv"></span>
+        <input class="card-form__cvv js-card-cvv" 
+               type="text"
+               name="cvv"
+               form="credit-card-form" 
+               placeholder="CVV"
+               maxlength="4" 
+               inputmode="numeric"
+               pattern="[0-9]*"
+               autocorrect="off"
+               autocomplete="off"
+               autocapitalize="off"
+               required>
+      </div>
+      <div class="card-form__wrapper">
+        <label class="card-form__store-card" for="email_field">
+          <input class="card-form__agree-store-card js-checkbox-for-email" 
+                 id="email_field"
+                 name="agree-store-card"
+                 form="credit-card-form" 
+                 type="checkbox">
+          <span class="card-form__agree-store-card-checkbox"></span>
+          Store the card
+        </label>
+      </div>
+      <div class="card-form__wrapper">
+        <span class="card-form__error-msg js-error-msg-cust-email js-display-none"></span>
+        <input class="card-form__email-of-customer js-cust-email js-display-none" 
+               type="email"
+               name="email-of-customer"
+               form="credit-card-form" 
+               placeholder="Email"
+               autocorrect="off"
+               autocapitalize="off"
+               autocomplete="off"
+               required>
+      </div>
+      <div class="card-form__wrapper">
+        <button form="credit-card-form"
+                class="card-form__submit-btn js-form-button"
+                name="submit-btn-of-card-form"
+                type="submit"
+                value="Submit">
+          Submit
+        </button>
+      </div>
+    </form>
+    <div class="container__completion js-completion js-display-none">
+      <h2 class="container__success-msg">
+        Succes!
+      </h2>
+    </div>
+  </div>
+  <div class="loader js-display-none">
+      <svg class="loader__svg" viewBox="0 0 150 150" width="150" height="150">
+        <circle 
+        class="loader__circle"
+        r="50" 
+        cx="75" 
+        cy="75" 
+        stroke="#15324f" 
+        stroke-width="10" 
+        fill="none"
+        stroke-dasharray="76" 
+        stroke-dashoffset="76"
+        stroke-linecap="round"
+        />
+      </svg>
+    </div>
+  <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+.loader {
+
+  margin: auto;
+
+  &__circle {
+    animation: load 0.7s linear reverse infinite;
+  }
+}
+
+@keyframes load {
+  from {
+    stroke-dashoffset: 76;
+  }
+
+  50% {
+    stroke-dashoffset: 152;
+  }
+
+  to {
+    stroke-dashoffset: 228;
+  }
+}
